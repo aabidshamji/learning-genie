@@ -14,7 +14,7 @@ public class QuestionNode implements DecisionNode{
 	}
 	
 	/**
-	* @returns the number of objects that the decision tree has learn
+	* @return the number of objects that the decision tree has learn
 	*/
 	@Override
 	public int countObjects() {
@@ -32,7 +32,7 @@ public class QuestionNode implements DecisionNode{
 	@Override
 	/**
 	* @param in, an open valid scanner
-	* @returns a DecisionNode if the guess is not already in the tree; null if the guess is in the tree
+	* @return a DecisionNode if the guess is not already in the tree; null if the guess is in the tree
 	*/
 	public DecisionNode guess(Scanner in) {
 		System.out.println(this.root);
