@@ -16,6 +16,7 @@ public class DecisionTree {
 	
 	/**
 	** @param file; the constuctor when a previous file tree is being used
+	** @throws FileNotFoundException
 	**/
 	public DecisionTree(File file) throws FileNotFoundException {
 		Scanner text = new Scanner(file);
@@ -66,6 +67,7 @@ public class DecisionTree {
 	/**
 	** Writes to the new file
 	** @param out, the new file to write to
+	** @throws IOException
 	**/
 	public void write(FileWriter out) throws IOException {
 		this.head.write(out);
