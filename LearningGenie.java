@@ -7,8 +7,8 @@ public class LearningGenie {
 
 	public static void main(String[] args) throws IOException {
 		// Open the files that are to be used for reading and writing to
-		FileWriter outfile = new FileWriter("src/WriteToMe.txt");
-		File file = new File("src/GrinnellBuildingsTree.txt");
+		FileWriter outfile = new FileWriter("WriteToMe.txt");
+		File file = new File("GrinnellBuildingsTree.txt");
 		
 		// Creates a new tree from the given file
 		DecisionTree tree = new DecisionTree(file);
