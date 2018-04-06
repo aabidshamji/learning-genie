@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class LearningGenie {
 
 	public static void main(String[] args) throws IOException {
-		FileWriter outfile = new FileWriter("src/hello2.txt");
-		File file = new File("src/hello.txt");
+		FileWriter outfile = new FileWriter("src/WriteToMe.txt");
+		File file = new File("src/GrinnellBuildingsTree.txt");
 		
 		DecisionTree tree = new DecisionTree(file);
 		boolean playing = true;
