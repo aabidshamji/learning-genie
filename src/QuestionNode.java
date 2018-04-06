@@ -12,7 +12,10 @@ public class QuestionNode implements DecisionNode{
 		this.left = left; 
 		this.right = right;
 	}
-
+	
+	/**
+	* @returns the number of objects that the decision tree has learn
+	*/
 	@Override
 	public int countObjects() {
 		if (!this.left.isQuestion()) {
@@ -27,6 +30,10 @@ public class QuestionNode implements DecisionNode{
 	}
 
 	@Override
+	/**
+	* @param in, an open valid scanner
+	* @returns a DecisionNode if the guess is not already in the tree; null if the guess is in the tree
+	*/
 	public DecisionNode guess(Scanner in) {
 		System.out.println(this.root);
 		String response = in.nextLine();
@@ -42,7 +49,10 @@ public class QuestionNode implements DecisionNode{
 		}
 		return null;
 	}
-
+	
+	/**
+	* @param an open and valid filewriter that the pre-order representation of the tree will be written to
+	*/
 	@Override
 	public void write(FileWriter out) throws IOException {
 		out.write("#" + this.root);
