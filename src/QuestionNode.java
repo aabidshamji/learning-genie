@@ -32,9 +32,11 @@ public class QuestionNode implements DecisionNode{
 		String response = in.nextLine();
 		response.toLowerCase();
 		if (response.equals("yes")) {
-			left.guess(in);
+			DecisionNode newNode = left.guess(in);
+			if (newNode != null) { this.left = newNode;}
 		} else if (response.equals("no")) {
-			right.guess(in);
+			DecisionNode newNode = right.guess(in);
+			if (newNode != null) { this.right = newNode;}
 		} else {
 			System.out.println("Invalid Answer");
 		}
@@ -43,8 +45,10 @@ public class QuestionNode implements DecisionNode{
 
 	@Override
 	public void write(FileWriter out) throws IOException {
-		// TODO Auto-generated method stub
-		
+		out.write("#" + this.root);
+		out.append('\n');
+		this.left.write(out);
+		this.right.write(out);
 	}
 	
 	public boolean isQuestion() {
