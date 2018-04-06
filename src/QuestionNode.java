@@ -52,6 +52,7 @@ public class QuestionNode implements DecisionNode{
 	
 	/**
 	* @param an open and valid filewriter that the pre-order representation of the tree will be written to
+	* @throws IOException
 	*/
 	@Override
 	public void write(FileWriter out) throws IOException {
