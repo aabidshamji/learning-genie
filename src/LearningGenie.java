@@ -29,7 +29,7 @@ public class LearningGenie {
 			
 			System.out.println("Do you want to continue?");
 			String resp = in.nextLine();
-			resp.toLowerCase();
+			resp = resp.toLowerCase();
 			if (resp.equals("no")) { // user want to quit program
 				playing = false;
 				// Write current tree to file

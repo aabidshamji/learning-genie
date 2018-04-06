@@ -37,7 +37,7 @@ public class QuestionNode implements DecisionNode{
 	public DecisionNode guess(Scanner in) {
 		System.out.println(this.root);
 		String response = in.nextLine();
-		response.toLowerCase();
+		response = response.toLowerCase();
 		if (response.equals("yes")) {
 			DecisionNode newNode = left.guess(in);
 			if (newNode != null) { this.left = newNode;}

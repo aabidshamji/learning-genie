@@ -31,7 +31,7 @@ public class GuessNode implements DecisionNode {
 	public DecisionNode guess(Scanner in) {
 		System.out.println("Were you thinking of " + root + "?");
 		String response = in.nextLine();
-		response.toLowerCase();
+		response = response.toLowerCase();
 		if (response.equals("yes")) {
 			System.out.println("Excellent, thanks!");
 		} else if (response.equals("no")) {
