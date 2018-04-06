@@ -4,19 +4,29 @@ import java.util.Scanner;
 
 public class GuessNode implements DecisionNode {
 	public String root;
-
-	public static int count; 
+	public static int count;  //number of guessNodes
 	
+	/**
+	** @param root, the string of the guess
+	**/
 	public GuessNode(String root) {
 		this.root= root;
 		count++; 
 	}
 
+	/**
+	** @return int count, the number of guess nodes
+	**/
 	@Override
 	public int countObjects() {
 		return count;
 	}
 
+	/**
+	** Prompts the user to see if the guess was correct, and adds new information if wrong
+	** @param in, a scanner of the user command line input
+	** @return newQ or null, a DecisionNode depending on the response to the guess
+	**/
 	@Override
 	public DecisionNode guess(Scanner in) {
 		System.out.println("Were you thinking of " + root + "?");
@@ -42,6 +52,11 @@ public class GuessNode implements DecisionNode {
 		return null;
 	}
 
+	/**
+	** Writes new guess to the new file
+	** @param out, the new file
+	** @throws IOException
+	**/
 	@Override
 	public void write(FileWriter out) throws IOException {
 		out.write(this.root);
@@ -49,6 +64,9 @@ public class GuessNode implements DecisionNode {
 		
 	}
 	
+	/**
+	**@return false, GuessNOde is not a question
+	**/
 	public boolean isQuestion() {
 		return false;
 	}
