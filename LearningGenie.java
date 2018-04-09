@@ -7,11 +7,13 @@ public class LearningGenie {
 
 	public static void main(String[] args) throws IOException {
 		// Open the files that are to be used for reading and writing to
-		FileWriter outfile = new FileWriter("WriteToMe.txt");
+		
 		File file = new File("GrinnellBuildingsTree.txt");
 		
 		// Creates a new tree from the given file
 		DecisionTree tree = new DecisionTree(file);
+		FileWriter outfile = new FileWriter("GrinnellBuildingsTree.txt");
+		
 		boolean playing = true;
 
 		System.out.println("I am the learning genie!");
@@ -40,6 +42,7 @@ public class LearningGenie {
 		}
 		
 		outfile.close();
+		
 		
 	}
 
